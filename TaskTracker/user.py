@@ -30,12 +30,12 @@ while True:
         elif choose == 2:
             taskManager.list_all()
             print("\n\nGive me an id of task to be updated: ")
-            id = int(input())
+            id = input()
             taskManager.update_task(id)
         elif choose == 3:
             taskManager.list_all()
             print("\n\nGive me an id of task to be deleted: ")
-            id = int(input())
+            id = input()
             taskManager.delete_task(id)
         else:
             print("Unknown command")

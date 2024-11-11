@@ -19,10 +19,8 @@ class TaskManager:
             print("File not found. Creating a new file.")
             tasks = {}
 
-        # Add the new task to tasks dictionary
         tasks[task.id] = task.to_json()
 
-        # Write updated tasks back to the file
         with open("tasks.json", "w") as file:
             json.dump(tasks, file, indent=4)
 
@@ -34,10 +32,10 @@ class TaskManager:
 
         with open("tasks.json", "r") as file:
             tasks = json.load(file)
-
-        if "task_id" in tasks:
-            tasks["task_id"]["description"] = new_desc
-            tasks["task_id"]["updated_at"] = datetime.now().isoformat()
+        
+        if task_id in tasks:
+            tasks[task_id]["description"] = new_desc
+            tasks[task_id]["updated_at"] = datetime.now().isoformat()
 
             with open("tasks.json", "w") as file:
                 json.dump(tasks, file, indent=4)
