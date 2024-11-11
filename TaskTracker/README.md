@@ -22,3 +22,5 @@ Task Tracker CLI is a command-line application designed to manage tasks efficien
 - status: The current status of the task (todo, in-progress, done).
 - createdAt: The timestamp when the task was created.
 - updatedAt: The timestamp when the task was last updated.
+
+@dawitsema source of motivation: ```https://roadmap.sh/projects/task-tracker```
