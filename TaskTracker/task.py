@@ -1,19 +1,15 @@
 import datetime
 
 class Task:
-    def __init__ (self, name, description, status):
-        self.name = name
+    id_counter = 1
+    def __init__ (self, description):
+        self.id = Task.id_counter
+        Task.id_counter += 1
         self.description = description
         self.status = "To Do"
         self.created_at = datetime.now()
         self.updated_at = datetime.now()
         
-    def updata_task(self, new_name):
-        self.name = new_name
-        self.update_time()
-        
-    def update_time(self):
-        self.updated_at = datetime.now()
         
     def mark_as_started(self):
         self.status = "In Progress"
