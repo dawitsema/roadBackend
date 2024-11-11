@@ -9,4 +9,4 @@ The application should run from the command line, accept the GitHub username as 
 - Fetch the recent activity of the specified GitHub user using the GitHub API. You can use the following endpoint to fetch the user’s activity:
 
 
-@dawitsema url ```https://github.com/dawitsema/roadBackend```
+@dawitsema my inspiration ```https://roadmap.sh/projects/github-user-activity```
