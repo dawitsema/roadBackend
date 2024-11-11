@@ -1,0 +1,32 @@
+{
+  "1": {
+    "id": "1",
+    "description": "lunch",
+    "amount": 29,
+    "created_at": "2024-11-12T00:46:57.090058"
+  },
+  "2": {
+    "id": "2",
+    "description": "dinner",
+    "amount": 20,
+    "created_at": "2024-11-12T00:47:21.417693"
+  },
+  "7": {
+    "id": "7",
+    "description": "shiro",
+    "amount": 40,
+    "created_at": "2024-11-12T00:55:02.892565"
+  },
+  "9": {
+    "id": "9",
+    "description": "pleasure",
+    "amount": "49",
+    "created_at": "2024-11-12T00:55:23.913785"
+  },
+  "10": {
+    "id": "10",
+    "description": "book",
+    "amount": 55,
+    "created_at": "2024-11-12T00:59:10.602611"
+  }
+}
