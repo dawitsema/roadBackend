@@ -9,7 +9,7 @@ try:
     
     if response.status_code == 200:
         activity = response.json()
-        print(f"\nHere are the 10 most recent activities of {username}:\n")
+        print(f"\nHere are the most recent activities of {username}:\n")
         
         for i, event in enumerate(activity):
             print(f'Activity {i + 1} : ')
