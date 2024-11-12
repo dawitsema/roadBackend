@@ -1,5 +1,6 @@
 import random
 import json
+import time
 
 class GameManager:
     def __init__(self):
@@ -47,6 +48,7 @@ class GameManager:
             json.dump(game_data, file, indent=2)
     
     def play_game(self):
+        start_time = time.time()
         secret_number = self.generate_secret_number()
         attempts = 0
         if self.dificulty == 1:
@@ -64,16 +66,25 @@ class GameManager:
             elif user_guess > secret_number:
                 print("The number is lower than your guess")
             else:
+                
                 print("Congratulations! You guessed the number correctly")
                 score = 100 - (attempts * 5)
+                end_time = time.time()
+                execution_time = end_time - start_time
+                
+                
                 if score > self.highscore:
                     self.set_highscore(score)
-                    print(f"New high score is achived: {score}")
+                    print(f"New high score is achived: {score}", f'You took {execution_time: .2f} seconds')
                 else:
-                    print(f"Your score: {score}")
+                    print(f"Your score: {score}", f'You took {execution_time: .2f} seconds')
                 break
         else:
-            print(f"Sorry! You have exhausted all your attempts. The number was {secret_number}")
+            end_time = time.time()
+            execution_time = end_time - start_time
+            print(f"Sorry! You have exhausted all your attempts. The number was {secret_number}", f'You took {execution_time: .2f} seconds')
+            
+            
         
         next_round = input('Do you want to play again? y/n: ')
         if next_round.lower() != 'n':
