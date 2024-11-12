@@ -1,6 +1,7 @@
 from expense import Expense
 import json
 from datetime import datetime
+import pandas as pd
 
 
 class ExpenseManager:
@@ -101,11 +102,24 @@ class ExpenseManager:
             months = input("which months data do you want? month(1 - 12): ")
             total_sum = 0
             for expense in expenses.values():
-                if datetime.strptime(expense['created_at'], '%Y-%m-%d').month == months:
+                if expense['created_at'].split("-")[1] == months:
                     total_sum += int(expense['amount'])
                     
             print(f'The Total Expenses of month {months}: ${total_sum}')
 
         except Exception as e:
             print(f'An error occured {e}')
+    
+    
+    
+    def json_to_csv(self):
+        try:
+            input_file = 'expenses.json'
+            output_file = 'expenses.csv'
             
+            data = pd.read_json(input_file)
+            data.to_csv(output_file, index=False)
+            print("file converted successfully!!")
+        except Exception as e:
+            print(f'An error occured during file conversion {e}')
+        

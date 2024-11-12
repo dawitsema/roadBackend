@@ -46,8 +46,8 @@ while True:
     elif ch == 8:
         pass
     elif ch == 9:
-        pass
-    
+        expenseManager.json_to_csv()
+        
     to_leave = input("Do you want to continue? y/n : ")
     if to_leave.lower() == 'n':
         break
